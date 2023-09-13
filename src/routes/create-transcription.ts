@@ -1,4 +1,5 @@
 import { FastifyInstance } from 'fastify';
+import { createReadStream } from 'node:fs';
 import { z } from 'zod';
 import { prisma } from '../lib/prisma';
 
@@ -21,6 +22,10 @@ export async function createTranscriptionRoute(app: FastifyInstance) {
         id: videoId,
       },
     });
+
+    const videoPath = video.path;
+
+    const audioReadStream = createReadStream(videoPath);
 
     return {
       videoId,
