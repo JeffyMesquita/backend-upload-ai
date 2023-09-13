@@ -43,3 +43,15 @@ pnpm i @fastify/multipart
 ```bash
 pnpm i zod
 ```
+
+## 7. Install OpenAi
+
+```bash
+pnpm i openai
+```
+
+## 8. Install dotenv
+
+```bash
+pnpm i dotenv -D
+```
