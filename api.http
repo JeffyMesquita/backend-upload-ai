@@ -26,3 +26,14 @@ Content-Type: application/json
 {
   "prompt": "Música do CPM22, um minuto para o fim do mundo"
 }
+
+### Genereate Ai Completion
+# @name generate-ai-completion
+POST {{baseUrl}}/ai/complete
+Content-Type: application/json
+
+{
+  "videoId": "{{videoId}}",
+  "temperature": 0.5,
+  "template": "Gere um resumo sucinto da transcrição do vídeo informada a seguir: '''{transcription}'''"
+}
