@@ -61,3 +61,15 @@ pnpm i dotenv -D
 ```bash
 pnpm i @fastify/cors
 ```
+
+## 10. Install ai
+
+```bash
+pnpm i ai
+```
+
+## 11. Run Seed
+
+```bash
+pnpm prisma db seed
+```
