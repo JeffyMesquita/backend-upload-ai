@@ -55,3 +55,9 @@ pnpm i openai
 ```bash
 pnpm i dotenv -D
 ```
+
+## 9. Install fastify-cors
+
+```bash
+pnpm i @fastify/cors
+```
