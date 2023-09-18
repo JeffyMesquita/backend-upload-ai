@@ -5,11 +5,11 @@
   "main": "build/server.js",
   "type": "module",
   "engines": {
-    "node": ">=18"
+    "node": "18.12.1"
   },
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsup src --out-dir build",
+    "build": "tsup src --out-dir build --out-dir tmp",
     "migrate:dev": "prisma migrate dev",
     "migrate:deploy": "prisma generate && prisma migrate deploy",
     "prisma:seed:": "tsx prisma/seed.ts"
@@ -31,7 +31,9 @@
     "@fastify/cors": "^8.3.0",
     "@fastify/multipart": "^7.7.3",
     "@prisma/client": "5.1.0",
+    "@supabase/supabase-js": "^2.33.2",
     "ai": "^2.2.12",
+    "base64-arraybuffer": "^1.0.2",
     "fastify": "^4.23.1",
     "openai": "^4.6.0",
     "tsup": "^7.2.0",

@@ -3,6 +3,7 @@ import { createReadStream } from 'node:fs';
 import { z } from 'zod';
 import { openai } from '../lib/openai';
 import { prisma } from '../lib/prisma';
+import { supabase } from '../lib/supabase';
 
 export async function createTranscriptionRoute(app: FastifyInstance) {
   app.post('/videos/:videoId/transcription', async (request, reply) => {
@@ -23,6 +24,12 @@ export async function createTranscriptionRoute(app: FastifyInstance) {
         id: videoId,
       },
     });
+
+    const { data, error } = await supabase.storage
+      .from('audio')
+      .download(`audio/${video.urlFilename}`);
+
+    console.log(data, error);
 
     const videoPath = video.path;
 

@@ -11,6 +11,7 @@ model Video {
   id            String   @id @default(uuid())
   name          String
   path          String
+  urlFilename   String?
   transcription String?
   createdAt     DateTime @default(now()) @map("created_at")
 
