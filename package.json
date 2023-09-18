@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsup src --out-dir build --out-dir tmp",
+    "build": "tsup src --out-dir build",
     "migrate:dev": "prisma migrate dev",
     "migrate:deploy": "prisma generate && prisma migrate deploy",
     "prisma:seed:": "tsx prisma/seed.ts"
