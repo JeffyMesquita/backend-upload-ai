@@ -3,6 +3,7 @@ CREATE TABLE "videos" (
     "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "path" TEXT NOT NULL,
+    "urlFilename" TEXT NOT NULL,
     "transcription" TEXT,
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 

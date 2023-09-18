@@ -57,8 +57,6 @@ export async function uploadVideoRoute(app: FastifyInstance) {
         7 * 24 * 60 * 60
       );
 
-    console.log(dataURL, errorURL);
-
     if (errorURL) {
       return reply.status(500).send({
         error: 'Failed to generate URL for audio file.',
